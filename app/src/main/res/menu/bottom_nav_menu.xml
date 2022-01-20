@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/kalender"
+        android:title="kalender"
+        android:icon="@drawable/kalender_foreground"/>
+    <item
+        android:id="@+id/journaling"
+        android:title="Journaling"
+        android:icon="@drawable/journaling_foreground"/>
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/setting_foreground"/>
+</menu>

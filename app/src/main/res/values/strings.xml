@@ -4,6 +4,18 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="login_text">Login</string>
-    <string name="register">Register</string>
+    <string name="register">Registrien</string>
+    <string name="register_text">Register</string>
+    <string name="kalender_text">Kalender</string>
+    <string name="journaling_text">Journaling</string>
+    <string name="setting_text">Setting</string>
+    <string name="email">E-mail</string>
+    <string name="password_widerholen">Password widerholen</string>
+    <string name="geburstag">Geburstag</string>
+    <string name="datenschutz">Datenschutzbestimmungen</string>
+
+
+
+
 
 </resources>
