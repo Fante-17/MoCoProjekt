@@ -2,14 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/kalender"
-        android:title="kalender"
-        android:icon="@drawable/kalender_foreground"/>
+        android:icon="@drawable/calender"
+        android:title="kalender" />
     <item
         android:id="@+id/journaling"
-        android:title="Journaling"
-        android:icon="@drawable/journaling_foreground"/>
+        android:icon="@drawable/journaling"
+        android:title="Journaling" />
     <item
         android:id="@+id/settings"
-        android:title="Settings"
-        android:icon="@drawable/setting_foreground"/>
+        android:icon="@drawable/settings"
+        android:title="Settings" />
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_dashboard" />
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_notifications" />
 </menu>
