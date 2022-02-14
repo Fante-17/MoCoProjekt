@@ -78,7 +78,6 @@
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <TextView
         android:id="@+id/end"
         android:layout_width="63dp"
