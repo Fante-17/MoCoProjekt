@@ -14,7 +14,7 @@
     <string name="geburstag">Geburstag</string>
     <string name="datenschutz">Datenschutzbestimmungen</string>
     <string name="journal">Meine Erlebnisse…</string>
-    <string name="name_event">Name des Event</string>
+    <string name="nameEvent">Name des Event</string>
     <string name="startort">Startort oder Call</string>
     <string name="notiz_art">Art der Notiz</string>
     <string name="begin">Beginn</string>
@@ -25,14 +25,18 @@
     <string name="end_time">Ende um…</string>
     <string name="wiederholung">Widerholung</string>
     <string name="wegzeit">Wegzeit</string>
-    <string name="Reminder">Reminder </string>
-    <string name="anzeigen_als">Anzeigen_als </string>
+    <string name="reminder">Reminder</string>
+    <string name="Reminderme">Reminder</string>
+    <string name="anzeigen_als">Anzeigen_als</string>
     <string name="save">Speichern</string>
     <string name="delete">Löschen</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="create_event">Your Event</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment">
+    tools:context=".LoginFragment"
+    android:paddingTop="60dp"
+    android:paddingHorizontal="10dp">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -16,51 +18,65 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu"/>
 
-
-    <EditText
-        android:id="@+id/name_event"
-        android:layout_width="380dp"
+    <TextView
+        android:id="@+id/myevent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/edit_border"
-        android:hint="@string/name_event"
-        android:minHeight="48dp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        android:text="@string/create_event"
+        android:paddingTop="8dp"
+        app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/startort"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edit_border"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myevent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/nameEvent"
+        android:id="@+id/nameEvent_input_layout"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameEvent_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintEnd_toEndOf="parent"
         android:hint="@string/startort"
-        android:minHeight="48dp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_event"
-        app:layout_constraintVertical_bias="0.0" />
+        android:id="@+id/startort_input_layout"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/startort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/art_notiz"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edit_border"
-        android:hint="@string/notiz_art"
-        android:minHeight="48dp"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startort" />
+        app:layout_constraintTop_toBottomOf="@+id/startort_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/startort"
+        android:id="@+id/artNotiz_input_layout"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/artNotiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     <TextView
@@ -83,13 +99,12 @@
         android:layout_height="48dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/edit_border"
-
         android:minHeight="48dp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.648"
         app:layout_constraintStart_toEndOf="@+id/start_day"
-        app:layout_constraintTop_toBottomOf="@+id/art_notiz" />
+        app:layout_constraintTop_toBottomOf="@+id/artNotiz_input_layout" />
 
     <TextView
         android:id="@+id/start_day"
@@ -97,13 +112,12 @@
         android:layout_height="46dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/edit_border"
-
         android:minHeight="48dp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.401"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/art_notiz"
+        app:layout_constraintTop_toBottomOf="@+id/artNotiz_input_layout"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
@@ -148,15 +162,16 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toStartOf="@+id/start_day"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/art_notiz"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintTop_toBottomOf="@+id/artNotiz_input_layout"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Switch
         android:id="@+id/widerholung"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
         android:minHeight="48dp"
         android:text="@string/wiederholung"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
@@ -164,13 +179,14 @@
         app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toEndOf="@+id/wegzeit"
         app:layout_constraintTop_toBottomOf="@+id/end_day"
-        app:layout_constraintVertical_bias="0.275" />
+        app:layout_constraintVertical_bias="0.275"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Switch
         android:id="@+id/wegzeit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="20dp"
         android:minHeight="48dp"
         android:text="@string/wegzeit"
         app:layout_constraintBottom_toTopOf="@+id/save"
@@ -178,20 +194,24 @@
         app:layout_constraintHorizontal_bias="0.162"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/end_day"
-        app:layout_constraintVertical_bias="0.504" />
+        app:layout_constraintVertical_bias="0.504"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
 
     <Switch
         android:id="@+id/reminder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
         android:minHeight="48dp"
-        android:text="@string/Reminder"
+        android:text="@string/reminder"
         app:layout_constraintBottom_toTopOf="@+id/delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/end_time"
-        app:layout_constraintVertical_bias="0.503" />
+        app:layout_constraintVertical_bias="0.504"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Button
         android:id="@+id/save"
@@ -216,6 +236,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/widerholung"
         app:layout_constraintVertical_bias="0.546" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
