@@ -23,8 +23,28 @@
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
     <activity
-        android:id="@+id/loginActivity"
+        android:id="@+id/navigation_Activity"
         android:name="stella.deborah.bulletjournaling.LoginFragment"
         android:label="activity_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/navigation_registration"
+        android:name="stella.deborah.bulletjournaling.RegistrationFragment"
+        android:label="registration"
+        tools:layout="@layout/fragment_registration"/>
+    <fragment
+        android:id="@+id/navigation_einstellungen"
+        android:name="stella.deborah.bulletjournaling.ui.einstellung.EinstellungenFragment"
+        android:label="einstellungen_fragment"
+        tools:layout="@layout/einstellungen_fragment" />
+    <fragment
+        android:id="@+id/navigation_journalings"
+        android:name="stella.deborah.bulletjournaling.ui.journalings.JournalingsFragment"
+        android:label="fragment_journalings"
+        tools:layout="@layout/fragment_journalings" />
+    <fragment
+        android:id="@+id/navigation_kalender"
+        android:name="stella.deborah.bulletjournaling.ui.kalender.KalenderFragment"
+        android:label="fragment_kalender"
+        tools:layout="@layout/fragment_kalender" />
 </navigation>

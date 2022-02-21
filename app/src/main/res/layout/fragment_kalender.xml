@@ -4,19 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment"
-    android:paddingTop="60dp"
+    tools:context=".ui.kalender.KalenderFragment"
     android:paddingHorizontal="10dp">
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu"/>
 
     <TextView
         android:id="@+id/myevent"
@@ -37,7 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:hint="@string/nameEvent"
         android:id="@+id/nameEvent_input_layout"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nameEvent"
@@ -53,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:hint="@string/startort"
         android:id="@+id/startort_input_layout"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/startort"
@@ -63,19 +52,20 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startort_input_layout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:hint="@string/startort"
         android:id="@+id/artNotiz_input_layout"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content">
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:hint="@string/startort"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startort_input_layout">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/artNotiz"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -99,6 +89,7 @@
         android:layout_marginTop="60dp"
         android:background="@drawable/edit_border"
         android:minHeight="48dp"
+        android:hint="@string/begin_time"
         android:textAlignment="center"
         android:onClick="showTimePickerDialog"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,6 +103,7 @@
         android:layout_width="181dp"
         android:layout_height="46dp"
         android:layout_marginTop="60dp"
+        android:hint="@string/begin_day"
         android:background="@drawable/edit_border"
         android:minHeight="48dp"
         android:textAlignment="center"
@@ -129,6 +121,7 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/edit_border"
         android:minHeight="48dp"
+        android:hint="@string/end_day"
         android:textAlignment="center"
         android:onClick="showDatePickerDialog"
         app:layout_constraintEnd_toEndOf="parent"
@@ -143,11 +136,11 @@
         android:layout_height="48dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="24dp"
+        android:text="@string/end_time"
         android:background="@drawable/edit_border"
         android:onClick="showTimePickerDialog"
         android:minHeight="48dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.702"
         app:layout_constraintStart_toEndOf="@+id/end_day"
@@ -164,7 +157,6 @@
         android:layout_marginEnd="16dp"
         android:text="@string/begin"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toStartOf="@+id/start_day"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -178,7 +170,6 @@
         android:layout_marginEnd="20dp"
         android:minHeight="48dp"
         android:text="@string/wiederholung"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toStartOf="@+id/reminder"
         app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toEndOf="@+id/wegzeit"
@@ -222,7 +213,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/save"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toStartOf="@+id/delete"
         app:layout_constraintHorizontal_bias="0.323"
         app:layout_constraintStart_toStartOf="parent"
@@ -234,7 +224,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/delete"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintStart_toStartOf="parent"

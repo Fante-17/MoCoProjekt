@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/kalender"
+        android:id="@+id/navigation_kalender"
         android:icon="@drawable/calender"
-        android:title="kalender" />
+        android:title="@string/kalender" />
     <item
-        android:id="@+id/journaling"
+        android:id="@+id/navigation_journalings"
         android:icon="@drawable/journaling"
-        android:title="Journaling" />
+        android:title="@string/journaling" />
     <item
-        android:id="@+id/settings"
+        android:id="@+id/navigation_einstellungen"
         android:icon="@drawable/settings"
-        android:title="Settings" />
-    <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
+        android:title="@string/settings" />
+
     <item
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/ic_dashboard_black_24dp"

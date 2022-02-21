@@ -10,14 +10,14 @@ import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuthException
 import com.google.firebase.auth.UserProfileChangeRequest
 import stella.deborah.bulletjournaling.databinding.FragmentLoginBinding
-import stella.deborah.bulletjournaling.databinding.RegistrationBinding
+import stella.deborah.bulletjournaling.databinding.FragmentRegistrationBinding
 import stella.deborah.bulletjournaling.utils.FirebaseUtil
 import kotlin.Exception
 
 class RegistrationFragment: Fragment() {
 
 
-    private var _binding: RegistrationBinding? = null
+    private var _binding: FragmentRegistrationBinding? = null
     private val binding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +30,7 @@ class RegistrationFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = RegistrationBinding.inflate(inflater, container, false)
+        _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
         val view = binding.root
         //username to be change to email
 
