@@ -22,19 +22,15 @@ import java.util.*
 class MainActivity : AppCompatActivity(){
 
     private lateinit var binding:   ActivityMainBinding
-    private lateinit var bindingk: FragmentKalenderBinding
-    private lateinit var beginn_date : TextView
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
-        bindingk = FragmentKalenderBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val navView: BottomNavigationView = binding.navView
-        beginn_date = bindingk.begin
-
 
         val navController = findNavController(R.id.nav_host_fragment_main)
         // Passing each menu ID as a set of Ids because each
@@ -46,14 +42,5 @@ class MainActivity : AppCompatActivity(){
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-    }
-
-    fun showDatePickerDialog(v: View) {
-        val newFragment = DatePickerFragment()
-        newFragment.show(supportFragmentManager, "datePicker")
-    }
-
-    fun showTimePickerDialog(v: View) {
-        TimePickerFragment().show(supportFragmentManager, "timePicker")
     }
 }

@@ -44,4 +44,6 @@ class JournalingsFragment : Fragment() {
         _binding = null
     }
 
+    //aufrufen
+   // journallist.set
 }

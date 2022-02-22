@@ -9,4 +9,9 @@ class JournalingsViewModel : ViewModel() {
         value = "This is Journaling Fragment"
     }
     val text: LiveData<String> = _text
+
+    //speichern
+
+    //aufrufen
+    //alle journal
 }
