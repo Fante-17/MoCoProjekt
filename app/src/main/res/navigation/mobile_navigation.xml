@@ -18,9 +18,9 @@
         tools:layout="@layout/fragment_login" />
     <fragment
         android:id="@+id/navigation_registration"
-        android:name="stella.deborah.bulletjournaling.RegistrationFragment"
-        android:label="registration"
-        tools:layout="@layout/fragment_registration"/>
+        android:name="stella.deborah.bulletjournaling.ui.registration.RegistrationsFragment"
+        android:label="@string/title_registration"
+        tools:layout="@layout/fragment_registration" />
     <fragment
         android:id="@+id/navigation_einstellungen"
         android:name="stella.deborah.bulletjournaling.ui.einstellung.EinstellungenFragment"
@@ -39,6 +39,6 @@
     <fragment
         android:id="@+id/loginsFragment"
         android:name="stella.deborah.bulletjournaling.ui.login.LoginsFragment"
-        android:label="fragment_login"
+        android:label="@string/title_login"
         tools:layout="@layout/fragment_login" />
 </navigation>
