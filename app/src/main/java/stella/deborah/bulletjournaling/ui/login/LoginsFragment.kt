@@ -1,25 +1,25 @@
-package stella.deborah.bulletjournaling
+package stella.deborah.bulletjournaling.ui.login
 
-import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Patterns
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuthException
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import stella.deborah.bulletjournaling.R
 import stella.deborah.bulletjournaling.databinding.FragmentLoginBinding
 import stella.deborah.bulletjournaling.utils.FirebaseUtil
 
+class LoginsFragment : Fragment() {
 
-class LoginFragment : Fragment() {
-    private var _binding:FragmentLoginBinding? = null
-     private val binding get() = _binding!!
+    private var _binding: FragmentLoginBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -28,7 +28,7 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-     _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val view = binding.root
         //username to be change to email
         binding.login.setOnClickListener {
@@ -36,7 +36,6 @@ class LoginFragment : Fragment() {
         }
         return view
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
@@ -50,13 +49,13 @@ class LoginFragment : Fragment() {
             FirebaseUtil.firebaseAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        Toast.makeText(context,"Login successful",Toast.LENGTH_LONG).show()
+                        Toast.makeText(context,"Login successful", Toast.LENGTH_LONG).show()
                     }
                     else{
                         try{
                             throw task.exception!!
                         }
-                        catch (firebaseEx:FirebaseAuthException) {
+                        catch (firebaseEx: FirebaseAuthException) {
                             Toast.makeText(context,firebaseEx.message, Toast.LENGTH_LONG).show()
                             return@addOnCompleteListener
                         } catch (ex:Exception){
@@ -68,7 +67,8 @@ class LoginFragment : Fragment() {
                 }
         }
         else{
-            Toast.makeText(context, "Email must be correct and password lenght must be greater than 5",Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Email must be correct and password lenght must be greater than 5",
+                Toast.LENGTH_LONG).show()
             return
         }
 
@@ -80,7 +80,8 @@ class LoginFragment : Fragment() {
         val currentUser = FirebaseUtil.firebaseAuth.currentUser
         if(currentUser != null){
             //navigate to appropriete destination
-            Toast.makeText(context,"A user is already logged in",Toast.LENGTH_LONG).show()
+            Toast.makeText(context,"A user is already logged in", Toast.LENGTH_LONG).show()
         }
     }
+
 }

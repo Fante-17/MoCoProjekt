@@ -1,6 +1,5 @@
 package stella.deborah.bulletjournaling.ui.kalender
 
-import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
@@ -8,11 +7,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import stella.deborah.bulletjournaling.DatePickerFragment
-import stella.deborah.bulletjournaling.R
 import stella.deborah.bulletjournaling.TimePickerFragment
 import stella.deborah.bulletjournaling.databinding.FragmentKalenderBinding
+import stella.deborah.bulletjournaling.model.Event
 import stella.deborah.bulletjournaling.model.PickerDate
 import stella.deborah.bulletjournaling.model.Time
 
@@ -41,10 +41,17 @@ class KalenderFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentKalenderBinding.inflate(inflater,container,false)
+        kalenderViewModel = ViewModelProvider(this).get(KalenderViewModel::class.java)
+
         startDay = binding.startDay
-         startTime= binding.startTime
-        endDay= binding.endDay
-        endTime= binding.endTime
+        startTime = binding.startTime
+        endDay = binding.endDay
+        endTime = binding.endTime
+        eventName = binding.nameEvent
+        eventPlace = binding.startort
+        eventType = binding.artNotiz
+        saveButton = binding.saveButton
+        deleteButton = binding.deleteButton
 
         val root: View = binding.root
 
@@ -57,15 +64,22 @@ class KalenderFragment : Fragment() {
     private var pickedDate: PickerDate? = null
     private var timed: Time? = null
 
-    lateinit  var startDay: TextView
+    lateinit var startDay: TextView
     lateinit var endDay: TextView
     lateinit var startTime:TextView
     lateinit var endTime: TextView
 
+    lateinit var eventName :TextView
+    lateinit var eventPlace : TextView
+    lateinit var eventType : TextView
+
+    lateinit var saveButton : Button
+    lateinit var deleteButton : Button
+
     private fun showDatePickerDialogBegin(v: View) {
         val newFragment = DatePickerFragment { date ->
             pickedDate = date
-            startDay.text = "${date.day}.${date.month + 1}.${date.year}"
+            "${date.day}.${date.month + 1}.${date.year}".also { startDay.text = it }
             Log.w(TAG, "User picked a date: $pickedDate")
         }
         newFragment.show(childFragmentManager, "datePicker")
@@ -73,25 +87,37 @@ class KalenderFragment : Fragment() {
     private fun showDatePickerDialogEnd(v: View) {
         val newFragment = DatePickerFragment { date ->
             pickedDate = date
-            endDay.text = "${date.day}.${date.month + 1}.${date.year}"
+            "${date.day}.${date.month + 1}.${date.year}".also { endDay.text = it }
             Log.w(TAG, "User picked a date: $pickedDate")
         }
         newFragment.show(childFragmentManager, "datePicker")
     }
 
-    fun showTimePickerDialogBegin(v: View) {
+    private fun showTimePickerDialogBegin(v: View) {
      val newFragment =   TimePickerFragment{ time->
             timed = time
-         startTime.text ="${time.hour}:${time.mins}"
+         "${time.hour}:${time.mins}".also { startTime.text = it }
         }
          newFragment.show(childFragmentManager, "timePicker")
     }
-    fun showTimePickerDialogEnd(v: View) {
+    private fun showTimePickerDialogEnd(v: View) {
         val newFragment =   TimePickerFragment{ time->
             timed = time
-            endTime.text ="${time.hour}:${time.mins}"
+            "${time.hour}:${time.mins}".also { endTime.text = it }
         }
         newFragment.show(childFragmentManager, "timePicker")
+    }
+
+    private fun onSaveButtonClicked(view: View){
+        val beginDay = startDay.text.toString()
+        val terminateDay = endDay.text.toString()
+        val beginTime = startTime.text.toString()
+        val terminateTime = endTime.text.toString()
+        val nameOfEvent = eventName.text.toString()
+        val placeOfEvent = eventPlace.text.toString()
+        val typeOfEvent = eventType.text.toString()
+        kalenderViewModel.createEvent(Event(nameOfEvent,placeOfEvent,typeOfEvent,beginDay,beginTime,terminateDay,terminateTime) )
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -100,6 +126,7 @@ class KalenderFragment : Fragment() {
         startTime.setOnClickListener(this::showTimePickerDialogBegin)
         endDay.setOnClickListener(this::showDatePickerDialogEnd)
         endTime.setOnClickListener(this::showTimePickerDialogEnd)
+        saveButton.setOnClickListener(this::onSaveButtonClicked)
     }
 
     override fun onDestroyView() {

@@ -1,29 +1,17 @@
 package stella.deborah.bulletjournaling
 
-import android.app.DatePickerDialog
-import android.app.Dialog
-import android.content.Context
 import android.os.Bundle
-import android.view.View
-import android.widget.DatePicker
-import android.widget.TextView
-import android.widget.TimePicker
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.DialogFragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import stella.deborah.bulletjournaling.databinding.ActivityMainBinding
-import stella.deborah.bulletjournaling.databinding.FragmentKalenderBinding
-import java.util.*
 
 class MainActivity : AppCompatActivity(){
 
-    private lateinit var binding:   ActivityMainBinding
-
-
+    private lateinit var binding:ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +25,7 @@ class MainActivity : AppCompatActivity(){
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+                R.id.navigation_home, R.id.navigation_journalings, R.id.navigation_kalender,R.id.navigation_registration,R.id.navigation_einstellungen, R.id.loginsFragment
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

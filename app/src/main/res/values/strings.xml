@@ -34,8 +34,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="create_event">Your Event</string>
-    <string name="title_notifications">Notification</string>
-
+    <string name="title_login">Login</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

@@ -8,25 +8,25 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="navigation_Activity">
+                  <entry key="loginsFragment2">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="-240" />
+                            <option name="y" value="380" />
                           </Point>
                         </option>
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="navigation_dashboard">
+                  <entry key="navigation_Activity">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="12" />
+                            <option name="x" value="-136" />
+                            <option name="y" value="36" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -80,25 +80,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="navigation_notifications">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="-160" />
-                            <option name="y" value="446" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="navigation_registration">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="12" />
+                            <option name="x" value="528" />
+                            <option name="y" value="342" />
                           </Point>
                         </option>
                       </LayoutPositions>

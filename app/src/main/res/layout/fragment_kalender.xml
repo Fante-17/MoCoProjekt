@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"
-        android:hint="@string/startort"
+        android:hint="@string/notiz_art"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startort_input_layout">
@@ -68,11 +68,14 @@
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <TextView
         android:id="@+id/end"
         android:layout_width="63dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
+
+        android:paddingTop="10dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="16dp"
         android:text="@string/end"
@@ -86,7 +89,8 @@
         android:id="@+id/start_time"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:layout_marginTop="60dp"
+        android:paddingTop="10dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/edit_border"
         android:minHeight="48dp"
         android:hint="@string/begin_time"
@@ -101,7 +105,8 @@
         android:id="@+id/start_day"
         android:layout_width="181dp"
         android:layout_height="46dp"
-        android:layout_marginTop="60dp"
+        android:paddingTop="10dp"
+        android:layout_marginTop="40dp"
         android:hint="@string/begin_day"
         android:background="@drawable/edit_border"
         android:minHeight="48dp"
@@ -117,6 +122,7 @@
         android:layout_width="181dp"
         android:layout_height="46dp"
         android:layout_marginTop="24dp"
+        android:paddingTop="10dp"
         android:background="@drawable/edit_border"
         android:minHeight="48dp"
         android:hint="@string/end_day"
@@ -131,6 +137,7 @@
         android:id="@+id/end_time"
         android:layout_width="100dp"
         android:layout_height="48dp"
+        android:paddingTop="10dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="24dp"
         android:text="@string/end_time"
@@ -149,7 +156,8 @@
         android:layout_width="63dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
+        android:paddingTop="10dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
         android:text="@string/begin"
         android:textAlignment="center"
@@ -180,7 +188,7 @@
         android:layout_marginEnd="20dp"
         android:minHeight="48dp"
         android:text="@string/wegzeit"
-        app:layout_constraintBottom_toTopOf="@+id/save"
+        app:layout_constraintBottom_toTopOf="@+id/saveButton"
         app:layout_constraintEnd_toStartOf="@+id/widerholung"
         app:layout_constraintHorizontal_bias="0.162"
         app:layout_constraintStart_toStartOf="parent"
@@ -196,7 +204,7 @@
         android:layout_marginEnd="20dp"
         android:minHeight="48dp"
         android:text="@string/reminder"
-        app:layout_constraintBottom_toTopOf="@+id/delete"
+        app:layout_constraintBottom_toTopOf="@+id/deleteButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -205,18 +213,18 @@
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Button
-        android:id="@+id/save"
+        android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/save"
-        app:layout_constraintEnd_toStartOf="@+id/delete"
+        app:layout_constraintEnd_toStartOf="@+id/deleteButton"
         app:layout_constraintHorizontal_bias="0.323"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/widerholung"
         app:layout_constraintVertical_bias="0.546" />
 
     <Button
-        android:id="@+id/delete"
+        android:id="@+id/deleteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/delete"

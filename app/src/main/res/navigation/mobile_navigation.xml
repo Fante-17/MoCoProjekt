@@ -11,20 +11,9 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
-    <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="stella.deborah.bulletjournaling.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="stella.deborah.bulletjournaling.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
     <activity
         android:id="@+id/navigation_Activity"
-        android:name="stella.deborah.bulletjournaling.LoginFragment"
+        android:name="stella.deborah.bulletjournaling.LoginsFragment"
         android:label="activity_login"
         tools:layout="@layout/fragment_login" />
     <fragment
@@ -35,16 +24,21 @@
     <fragment
         android:id="@+id/navigation_einstellungen"
         android:name="stella.deborah.bulletjournaling.ui.einstellung.EinstellungenFragment"
-        android:label="einstellungen_fragment"
+        android:label="@string/settings"
         tools:layout="@layout/einstellungen_fragment" />
     <fragment
         android:id="@+id/navigation_journalings"
         android:name="stella.deborah.bulletjournaling.ui.journalings.JournalingsFragment"
-        android:label="fragment_journalings"
+        android:label="@string/journaling"
         tools:layout="@layout/fragment_journalings" />
     <fragment
         android:id="@+id/navigation_kalender"
         android:name="stella.deborah.bulletjournaling.ui.kalender.KalenderFragment"
-        android:label="fragment_kalender"
+        android:label="@string/kalender"
         tools:layout="@layout/fragment_kalender" />
+    <fragment
+        android:id="@+id/loginsFragment"
+        android:name="stella.deborah.bulletjournaling.ui.login.LoginsFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
 </navigation>
