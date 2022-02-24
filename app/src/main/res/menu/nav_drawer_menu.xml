@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_journal"
+        android:icon="@drawable/journal_achieves"
+        android:title="@string/title_journals" />
+    <item
+        android:id="@+id/navigation_event"
+        android:icon="@drawable/event_archieves"
+        android:title="@string/title_events" />
+
+</menu>

@@ -3,7 +3,8 @@
 <menu xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:ignore="ExtraText">
-    app:itemBackground="@themes/colorPrimary"
+    app:itemBackground="@themes/icon"
+
     <item
         android:id="@+id/navigation_kalender"
         android:icon="@drawable/calender"

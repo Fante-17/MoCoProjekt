@@ -23,9 +23,9 @@
         tools:layout="@layout/fragment_registration" />
     <fragment
         android:id="@+id/navigation_einstellungen"
-        android:name="stella.deborah.bulletjournaling.ui.einstellung.EinstellungenFragment"
+        android:name="stella.deborah.bulletjournaling.ui.home.HomeFragment"
         android:label="@string/settings"
-        tools:layout="@layout/einstellungen_fragment" />
+        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/navigation_journalings"
         android:name="stella.deborah.bulletjournaling.ui.journalings.JournalingsFragment"
