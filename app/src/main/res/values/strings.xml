@@ -42,6 +42,7 @@
     <string name="title_journals">Journals</string>
     <string name="title_content">Contents</string>
     <string name="title_events">Events</string>
+    <string name="title_event">Your Events</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
 

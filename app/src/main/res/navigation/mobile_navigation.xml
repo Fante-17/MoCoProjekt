@@ -44,6 +44,6 @@
     <fragment
         android:id="@+id/event_list"
         android:name="stella.deborah.bulletjournaling.event_list"
-        android:label="fragment_event_list"
+        android:label="@string/title_event"
         tools:layout="@layout/fragment_event_list" />
 </navigation>
