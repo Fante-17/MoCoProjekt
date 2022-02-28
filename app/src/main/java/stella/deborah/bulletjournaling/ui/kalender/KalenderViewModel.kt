@@ -40,4 +40,19 @@ class KalenderViewModel : ViewModel() {
                 eventCreatedLiveData.value = false
             }
     }
+
+
+
+    fun loadEvent() {
+        db.collection("events")
+            .get()
+            .addOnSuccessListener { result ->
+                val data = result.toObjects(Event::class.java)
+                eventLiveData.value = data.toList()
+            }
+            .addOnFailureListener { exception ->
+                Log.w(TAG, "Error getting documents.", exception)
+            }
+    }
+
 }

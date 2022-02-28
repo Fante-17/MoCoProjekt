@@ -13,7 +13,7 @@
 
     <activity
         android:id="@+id/navigation_Activity"
-        android:name="stella.deborah.bulletjournaling.LoginsFragment"
+        android:name="stella.deborah.bulletjournaling.ui.login.LoginsFragment"
         android:label="activity_login"
         tools:layout="@layout/fragment_login" />
     <fragment
@@ -41,4 +41,9 @@
         android:name="stella.deborah.bulletjournaling.ui.login.LoginsFragment"
         android:label="@string/title_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/event_list"
+        android:name="stella.deborah.bulletjournaling.event_list"
+        android:label="fragment_event_list"
+        tools:layout="@layout/fragment_event_list" />
 </navigation>
