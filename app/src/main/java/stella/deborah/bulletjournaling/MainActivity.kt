@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(){
         binding.navViewMenu.setNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.navigation_journal-> Toast.makeText(applicationContext, "Here comes the whole Journal notes from the Server", Toast.LENGTH_LONG).show()
-                R.id.navigation_event-> Toast.makeText(applicationContext, "Here comes the whole created Events from the Server", Toast.LENGTH_LONG).show()
+                R.id.navigation_event-> Toast.makeText(applicationContext, "Here comes the whole created Events  from the Server", Toast.LENGTH_LONG).show()
             }
             true
         }
